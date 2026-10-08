@@ -1,0 +1,94 @@
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+}
+
+.logo img {
+    width: 100px;
+}
+/* Estilos para la barra de navegación */
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+/* controlamos el color para que no quede en azul feo y viejo y se sale el subrayado REVISAR MAsa adelante si hay otro efecto mas LINDO*/
+nav a {
+    text-decoration: none;
+    color: #222;
+}
+/* efecto de mouse cuando pasmos por encima de los enlaces de la barra de navegacion */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el enlace activo queda señalada la pagina donde estamos en ese momento*/
+.nav .activo {
+    font-weight: bold;
+}
+
+.contenido-principal {
+    text-align: center;
+    padding: 80px 20px;
+}
+/* Estilos para el contenido principal */
+.contenido-principal h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/*evita que el texto se estire demasiado en iun a pantalla grande*/
+.contenido-principal p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+/*convertir en boton el ver produtcto inline block ayuida a aplicarle correctamente las dimensions pading etc*/
+.contenido-principal a {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background-color: #1b04ec;
+    color: white;
+    border-radius: 6px;
+}
+/* cambia color el boton al pasar el mouse por arriba*/
+.contenido-principal a:hover {
+    background-color: #444;
+}
+
+/* carrusel de imagenes */
+.carrusel {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.carrusel img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.controles-carrusel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.controles-carrusel button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.controles-carrusel button:hover {
+    background-color: #ddd;
+}
