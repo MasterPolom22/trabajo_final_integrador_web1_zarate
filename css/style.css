@@ -92,3 +92,8 @@ nav a:hover {
 .controles-carrusel button:hover {
     background-color: #ddd;
 }
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+}
