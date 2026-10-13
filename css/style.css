@@ -1,83 +1,156 @@
+
+/* =========================
+   1. COLORES Y BASE
+========================= */
+
+:root {
+    --color-principal: #20242B;
+    --color-acento: #FF7518;
+    --color-fondo: #F4F5F7;
+    --color-blanco: #FFFFFF;
+    --color-texto: #30343B;
+    --color-borde: #D9DDE3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    color: var(--color-principal);
+    line-height: 1.2;
+}
+
+
+/* =========================
+   2. ENCABEZADO Y NAVEGACIÓN
+========================= */
+
 .encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 20px 60px;
+    gap: 25px;
+    padding: 15px 5%;
+    background-color: var(--color-principal);
 }
 
 .logo img {
-    width: 100px;
+    display: block;
+    width: 120px;
+    height: auto;
 }
-/* Estilos para la barra de navegación */
+
 .nav {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
-/* controlamos el color para que no quede en azul feo y viejo y se sale el subrayado REVISAR MAsa adelante si hay otro efecto mas LINDO*/
-nav a {
+.nav a {
+    color: var(--color-blanco);
     text-decoration: none;
-    color: #222;
-}
-/* efecto de mouse cuando pasmos por encima de los enlaces de la barra de navegacion */
-nav a:hover {
-    text-decoration: underline;
+    font-weight: bold;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Estilo para el enlace activo queda señalada la pagina donde estamos en ese momento*/
-.nav .activo {
-    font-weight: bold;
+.nav a:hover,
+.nav a.activo {
+    color: var(--color-acento);
+    border-bottom-color: var(--color-acento);
 }
+
+
+/* =========================
+   3. CONTENIDO PRINCIPAL
+========================= */
 
 .contenido-principal {
     text-align: center;
     padding: 80px 20px;
-}
-/* Estilos para el contenido principal */
-.contenido-principal h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    background-color: var(--color-blanco);
 }
 
-/*evita que el texto se estire demasiado en iun a pantalla grande*/
+.contenido-principal h1 {
+    font-size: 48px;
+    margin: 0 0 20px;
+}
+
 .contenido-principal p {
     font-size: 20px;
     max-width: 600px;
     margin: 0 auto 30px;
 }
-/*convertir en boton el ver produtcto inline block ayuida a aplicarle correctamente las dimensions pading etc*/
+
 .contenido-principal a {
     display: inline-block;
     padding: 12px 25px;
     text-decoration: none;
-    background-color: #1b04ec;
-    color: white;
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
     border-radius: 6px;
-}
-/* cambia color el boton al pasar el mouse por arriba*/
-.contenido-principal a:hover {
-    background-color: #444;
+    font-weight: bold;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
 }
 
-/* carrusel de imagenes */
+.contenido-principal a:hover {
+    background-color: #DB5D08;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   4. CARRUSEL
+========================= */
+
 .carrusel {
     max-width: 800px;
     margin: 40px auto;
+    padding: 0 20px;
     text-align: center;
 }
 
+
+.carrusel img.desvaneciendo {
+    opacity: 0;
+}
+
 .carrusel img {
+    display: block;
     width: 100%;
-    max-height: 650px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
+
+    opacity: 2;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carrusel img.desvaneciendo {
+    opacity: 0;
 }
 
 .controles-carrusel {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 15px;
 }
 
@@ -86,14 +159,231 @@ nav a:hover {
     font-size: 20px;
     border: none;
     border-radius: 6px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .controles-carrusel button:hover {
-    background-color: #ddd;
+    background-color: var(--color-acento);
+}
+
+
+/* =========================
+   5. PRODUCTOS
+========================= */
+
+.productos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 5%;
+}
+
+.productos > h1,
+.productos > p {
+    text-align: center;
+}
+
+.productos > p {
+    max-width: 700px;
+    margin: 20px auto 35px;
 }
 
 .contenedor-productos {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.producto {
+    flex: 1 1 250px;
+    max-width: 350px;
+    padding: 20px;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.producto img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.producto h2 {
+    font-size: 22px;
+}
+
+
+/* =========================
+   6. FORMULARIO DE CONTACTO
+========================= */
+
+.contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 45px 20px;
+}
+
+.contacto > h1,
+.contacto > p {
+    text-align: center;
+}
+
+#formulario-contacto {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #B8BDC5;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--color-acento);
+    border-color: var(--color-acento);
+}
+
+.error {
+    color: #C62828;
+    font-size: 14px;
+}
+
+#formulario-contacto button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#formulario-contacto button:hover {
+    background-color: #DB5D08;
+}
+
+#resultado-formulario {
+    margin-top: 25px;
+    overflow-wrap: anywhere;
+}
+
+#resultado-formulario:empty {
+    display: none;
+}
+
+
+/* =========================
+   7. PIE DE PÁGINA
+========================= */
+
+.pie-pagina {
+    margin-top: 50px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+.pie-contenido {
+    padding: 30px 20px;
+}
+
+.pie-contenido h2 {
+    margin-bottom: 10px;
+    color: var(--color-blanco);
+}
+
+.pie-contenido p {
+    margin: 5px 0;
+}
+
+.pie-inferior {
+    padding: 15px 20px;
+    border-top: 1px solid #454A53;
+    font-size: 14px;
+}
+
+.pie-inferior p {
+    margin: 0;
+}
+
+
+/* =========================
+   8. DISEÑO PARA CELULARES
+========================= */
+
+@media (max-width: 600px) {
+    .encabezado {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contenido-principal {
+        padding: 50px 20px;
+    }
+
+    .contenido-principal h1 {
+        font-size: 34px;
+    }
+
+    .contenido-principal p {
+        font-size: 18px;
+    }
+
+    .carrusel img {
+        height: 260px;
+    }
+
+    .productos {
+        padding: 35px 20px;
+    }
+
+    .producto {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    #formulario-contacto {
+        padding: 18px;
+    }
 }
