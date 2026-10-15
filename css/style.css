@@ -1,7 +1,8 @@
 
-/* =========================
-   1. COLORES Y BASE
-========================= */
+
+/*
+   colores
+*/
 
 :root {
     --color-principal: #20242B;
@@ -35,9 +36,9 @@ h2 {
 }
 
 
-/* =========================
-   2. ENCABEZADO Y NAVEGACIÓN
-========================= */
+/*
+   encabezado y navegacion
+ */
 
 .encabezado {
     display: flex;
@@ -77,9 +78,9 @@ h2 {
 }
 
 
-/* =========================
-   3. CONTENIDO PRINCIPAL
-========================= */
+/* 
+   contenido principal
+*/
 
 .contenido-principal {
     text-align: center;
@@ -116,9 +117,7 @@ h2 {
 }
 
 
-/* =========================
-   4. CARRUSEL
-========================= */
+/* carrusell */
 
 .carrusel {
     max-width: 800px;
@@ -170,9 +169,7 @@ h2 {
 }
 
 
-/* =========================
-   5. PRODUCTOS
-========================= */
+/* productos */
 
 .productos {
     max-width: 1200px;
@@ -226,9 +223,7 @@ h2 {
 }
 
 
-/* =========================
-   6. FORMULARIO DE CONTACTO
-========================= */
+/* formulario */
 
 .contacto {
     max-width: 700px;
@@ -304,9 +299,7 @@ h2 {
 }
 
 
-/* =========================
-   7. PIE DE PÁGINA
-========================= */
+/* footer */
 
 .pie-pagina {
     margin-top: 50px;
@@ -339,9 +332,7 @@ h2 {
 }
 
 
-/* =========================
-   8. DISEÑO PARA CELULARES
-========================= */
+/* adaptacion para celulares */
 
 @media (max-width: 600px) {
     .encabezado {
