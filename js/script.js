@@ -16,6 +16,10 @@ const imagenes = [
     src: "img/producto4.png",
     alt: "Producto 4 impreso en 3D",
   },
+  {
+    src: "img/productolargo.jfif",
+    alt: "Producto 5 impreso en 3D",
+  },
 ];
 
 let indiceActual = 0;

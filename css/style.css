@@ -120,10 +120,10 @@ h2 {
 /* carrusell */
 
 .carrusel {
-    max-width: 800px;
+    width: 100%;
+    max-width: 850px;
     margin: 40px auto;
     padding: 0 20px;
-    text-align: center;
 }
 
 
@@ -134,16 +134,16 @@ h2 {
 .carrusel img {
     display: block;
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
+    background-color: #FFFFFF;
     border-radius: 10px;
-
-    opacity: 2;
     transition: opacity 0.5s ease-in-out;
 }
 
 .carrusel img.desvaneciendo {
-    opacity: 0;
+    opacity: 1;
 }
 
 .controles-carrusel {
