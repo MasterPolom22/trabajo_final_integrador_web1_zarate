@@ -3,9 +3,10 @@
 /*
    colores
 */
+/* :root seudo clase para crear variables y reutilizarlas(visto en youtub) */
+:root {    
 
-:root {
-    --color-principal: #20242B;
+    --color-principal: #2c5293;
     --color-acento: #FF7518;
     --color-fondo: #dce5f7;
     --color-blanco: #FFFFFF;
@@ -19,6 +20,7 @@
 
 body {
     margin: 0;
+    /*3 estilos de letra por las dudas que no este disponible alguna */
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto);
@@ -26,6 +28,7 @@ body {
 }
 
 img {
+    /* para que las imagenes no se salgan del contenedor */
     max-width: 100%;
 }
 
@@ -36,30 +39,30 @@ h2 {
 }
 
 
-/*
-   encabezado y navegacion
- */
+/*   encabezado y navegacion */
 
 .encabezado {
     display: flex;
+    /* para que los elementos se separen y queden a los extremos */
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
-    padding: 15px 5%;
+    gap: 30px;
+    padding: 12px 5%;
     background-color: var(--color-principal);
 }
 
 .logo img {
     display: block;
-    width: 120px;
+    width: 100px;
     height: auto;
 }
 
 .nav {
     display: flex;
     align-items: center;
+    /* para que los elementos se acomoden en varias lineas si no entran en una sola */
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 20px;
 }
 
 .nav a {
