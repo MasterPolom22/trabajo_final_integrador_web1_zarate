@@ -1,5 +1,5 @@
 //formulario contacto
-const formulario = document.getElementById("formulario-contacto");
+const formulario = document.getElementById("formularioContacto");
 const nombreInput = document.getElementById("nombre");
 const emailInput = document.getElementById("email");
 const telefonoInput = document.getElementById("telefono");
@@ -19,14 +19,14 @@ formulario.addEventListener("submit", function(event) {
     mensaje.value = mensaje.value.trim();
 
     //limpiar errores previos
-    document.getElementById("error-nombre").textContent = "";
-    document.getElementById("error-email").textContent = "";
-    document.getElementById("error-telefono").textContent = "";
-    document.getElementById("error-mensaje").textContent = "";
+    document.getElementById("errorNombre").textContent = "";
+    document.getElementById("errorEmail").textContent = "";
+    document.getElementById("errorTelefono").textContent = "";
+    document.getElementById("errorMensaje").textContent = "";
 
     // validacion de nombre
     if (nombre.value.length < 3 || nombre.value.length > 50) {
-        document.getElementById("error-nombre").textContent =
+        document.getElementById("errorNombre").textContent =
             "El nombre debe tener entre 3 y 50 caracteres.";
         formularioValido = false;
     }
@@ -35,7 +35,7 @@ formulario.addEventListener("submit", function(event) {
     const expresionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!expresionEmail.test(email.value) || email.value.length > 100) {
-        document.getElementById("error-email").textContent =
+        document.getElementById("errorEmail").textContent =
             "Ingresá un correo electrónico válido.";
         formularioValido = false;
     }
@@ -49,20 +49,20 @@ formulario.addEventListener("submit", function(event) {
         cantidadDigitos < 8 ||
         cantidadDigitos > 15
     ) {
-        document.getElementById("error-telefono").textContent =
+        document.getElementById("errorTelefono").textContent =
             "Ingresá un teléfono válido, con entre 8 y 15 dígitos.";
         formularioValido = false;
     }
 
     // validacion de   mensaje
     if (mensaje.value.length < 10 || mensaje.value.length > 500) {
-        document.getElementById("error-mensaje").textContent =
+        document.getElementById("errorMensaje").textContent =
             "El mensaje debe tener entre 10 y 500 caracteres.";
         formularioValido = false;
     }
 
     if (formularioValido) {
-           const resultado = document.getElementById("resultado-formulario");
+           const resultado = document.getElementById("resultadoFormulario");
 
     // Limpiamos el resultado anterior
     resultado.textContent = "";

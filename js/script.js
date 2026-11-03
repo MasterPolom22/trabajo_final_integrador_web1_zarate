@@ -1,30 +1,27 @@
 /*carrusell*/
 const imagenes = [
   {
-    src: "img/producto1.png",
-    alt: "Producto 1 impreso en 3D",
+    src: "img/banner1.jfif",
+    alt: "banner publicitario de productos impresos en 3D",
   },
   {
-    src: "img/producto2.png",
-    alt: "Producto 2 impreso en 3D",
+    src: "img/banner2.png",
+    alt: "banner publicitario de productos impresos en 3D",
   },
   {
-    src: "img/producto3.png",
-    alt: "Producto 3 impreso en 3D",
+    src: "img/banner3.png",
+    alt: "banner publicitario de productos impresos en 3D",
   },
   {
-    src: "img/producto4.png",
-    alt: "Producto 4 impreso en 3D",
+    src: "img/bannerLogo.png",
+    alt: "banner publicitario de productos impresos en 3D",
   },
-  {
-    src: "img/productolargo.jfif",
-    alt: "Producto 5 impreso en 3D",
-  },
+ 
 ];
 
 let indiceActual = 0;
 
-const imagenCarrusel = document.getElementById("imagen-carrusel");
+const imagenCarrusel = document.getElementById("imagenCarrusel");
 const botonAnterior = document.getElementById("anterior");
 const botonSiguiente = document.getElementById("siguiente");
 
@@ -63,6 +60,6 @@ setInterval(function () {
 
     mostrarImagen();
 
-}, 5000);
+}, 6000);
 
 

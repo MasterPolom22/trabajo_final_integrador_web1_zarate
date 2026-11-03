@@ -7,9 +7,9 @@ const productos = {
     }
 };
 
-const botonesDetalles = document.querySelectorAll(".btn-detalles");
-const modal = document.getElementById("modal-producto");
-const botonCerrar = document.getElementById("cerrar-modal");
+const botonesDetalles = document.querySelectorAll(".btnDetalles");
+const modal = document.getElementById("modalProducto");
+const botonCerrar = document.getElementById("cerrarModal");
 
 botonesDetalles.forEach(function(boton) {
     boton.addEventListener("click", function() {
@@ -20,11 +20,11 @@ botonesDetalles.forEach(function(boton) {
             return;
         }
 
-        document.getElementById("imagen-detalle").src = producto.imagen;
-        document.getElementById("imagen-detalle").alt = producto.titulo;
-        document.getElementById("titulo-detalle").textContent = producto.titulo;
-        document.getElementById("descripcion-detalle").textContent = producto.descripcion;
-        document.getElementById("caracteristicas-detalle").textContent = producto.caracteristicas;
+        document.getElementById("imagenDetalle").src = producto.imagen;
+        document.getElementById("imagenDetalle").alt = producto.titulo;
+        document.getElementById("tituloDetalle").textContent = producto.titulo;
+        document.getElementById("descripcionDetalle").textContent = producto.descripcion;
+        document.getElementById("caracteristicasDetalle").textContent = producto.caracteristicas;
 
         modal.style.display = "flex";
     });
@@ -67,11 +67,11 @@ botonesDetalles.forEach(function(boton) {
             return;
         }
 
-        document.getElementById("imagen-detalle").src = producto.imagen;
-        document.getElementById("imagen-detalle").alt = producto.titulo;
-        document.getElementById("titulo-detalle").textContent = producto.titulo;
-        document.getElementById("descripcion-detalle").textContent = producto.descripcion;
-        document.getElementById("caracteristicas-detalle").textContent = producto.caracteristicas;
+        document.getElementById("imagenDetalle").src = producto.imagen;
+        document.getElementById("imagenDetalle").alt = producto.titulo;
+        document.getElementById("tituloDetalle").textContent = producto.titulo;
+        document.getElementById("descripcionDetalle").textContent = producto.descripcion;
+        document.getElementById("caracteristicasDetalle").textContent = producto.caracteristicas;
 
         modal.style.display = "flex";
     });
@@ -100,11 +100,11 @@ botonesDetalles.forEach(function(boton) {
             return;
         }
 
-        document.getElementById("imagen-detalle").src = producto.imagen;
-        document.getElementById("imagen-detalle").alt = producto.titulo;
-        document.getElementById("titulo-detalle").textContent = producto.titulo;
-        document.getElementById("descripcion-detalle").textContent = producto.descripcion;
-        document.getElementById("caracteristicas-detalle").textContent = producto.caracteristicas;
+        document.getElementById("imagenDetalle").src = producto.imagen;
+        document.getElementById("imagenDetalle").alt = producto.titulo;
+        document.getElementById("tituloDetalle").textContent = producto.titulo;
+        document.getElementById("descripcionDetalle").textContent = producto.descripcion;
+        document.getElementById("caracteristicasDetalle").textContent = producto.caracteristicas;
 
         modal.style.display = "flex";
     });
@@ -131,11 +131,11 @@ botonesDetalles.forEach(function(boton) {
             return;
         }
 
-        document.getElementById("imagen-detalle").src = producto.imagen;
-        document.getElementById("imagen-detalle").alt = producto.titulo;
-        document.getElementById("titulo-detalle").textContent = producto.titulo;
-        document.getElementById("descripcion-detalle").textContent = producto.descripcion;
-        document.getElementById("caracteristicas-detalle").textContent = producto.caracteristicas;
+        document.getElementById("imagenDetalle").src = producto.imagen;
+        document.getElementById("imagenDetalle").alt = producto.titulo;
+        document.getElementById("tituloDetalle").textContent = producto.titulo;
+        document.getElementById("descripcionDetalle").textContent = producto.descripcion;
+        document.getElementById("caracteristicasDetalle").textContent = producto.caracteristicas;
 
         modal.style.display = "flex";
     });
@@ -162,11 +162,11 @@ botonesDetalles.forEach(function(boton) {
             return;
         }
 
-        document.getElementById("imagen-detalle").src = producto.imagen;
-        document.getElementById("imagen-detalle").alt = producto.titulo;
-        document.getElementById("titulo-detalle").textContent = producto.titulo;
-        document.getElementById("descripcion-detalle").textContent = producto.descripcion;
-        document.getElementById("caracteristicas-detalle").textContent = producto.caracteristicas;
+        document.getElementById("imagenDetalle").src = producto.imagen;
+        document.getElementById("imagenDetalle").alt = producto.titulo;
+        document.getElementById("tituloDetalle").textContent = producto.titulo;
+        document.getElementById("descripcionDetalle").textContent = producto.descripcion;
+        document.getElementById("caracteristicasDetalle").textContent = producto.caracteristicas;
 
         modal.style.display = "flex";
     });
@@ -194,11 +194,11 @@ botonesDetalles.forEach(function(boton) {
             return;
         }
 
-        document.getElementById("imagen-detalle").src = producto.imagen;
-        document.getElementById("imagen-detalle").alt = producto.titulo;
-        document.getElementById("titulo-detalle").textContent = producto.titulo;
-        document.getElementById("descripcion-detalle").textContent = producto.descripcion;
-        document.getElementById("caracteristicas-detalle").textContent = producto.caracteristicas;
+        document.getElementById("imagenDetalle").src = producto.imagen;
+        document.getElementById("imagenDetalle").alt = producto.titulo;
+        document.getElementById("tituloDetalle").textContent = producto.titulo;
+        document.getElementById("descripcionDetalle").textContent = producto.descripcion;
+        document.getElementById("caracteristicasDetalle").textContent = producto.caracteristicas;
 
         modal.style.display = "flex";
     });
