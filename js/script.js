@@ -26,40 +26,45 @@ const botonAnterior = document.getElementById("anterior");
 const botonSiguiente = document.getElementById("siguiente");
 
 function mostrarImagen() {
-  imagenCarrusel.src = imagenes[indiceActual].src;
-  imagenCarrusel.alt = imagenes[indiceActual].alt;
+    imagenCarrusel.src = imagenes[indiceActual].src;
+    imagenCarrusel.alt = imagenes[indiceActual].alt;
+}
+
+let cambiandoImagen = false;
+
+function cambiarImagen(direccion) {
+    if (cambiandoImagen) {
+        return;
+    }
+
+    cambiandoImagen = true;
+    imagenCarrusel.classList.add("desvaneciendo");
+
+    setTimeout(function () {
+        indiceActual += direccion;
+
+        if (indiceActual >= imagenes.length) {
+            indiceActual = 0;
+        }
+
+        if (indiceActual < 0) {
+            indiceActual = imagenes.length - 1;
+        }
+
+        mostrarImagen();
+        imagenCarrusel.classList.remove("desvaneciendo");
+        cambiandoImagen = false;
+    }, 800);
 }
 
 botonSiguiente.addEventListener("click", function () {
-  indiceActual++;
-
-  if (indiceActual >= imagenes.length) {
-    indiceActual = 0;
-  }
-
-  mostrarImagen();
+    cambiarImagen(1);
 });
 
 botonAnterior.addEventListener("click", function () {
-  indiceActual--;
-
-  if (indiceActual < 0) {
-    indiceActual = imagenes.length - 1;
-  }
-
-  mostrarImagen();
+    cambiarImagen(-1);
 });
 
 setInterval(function () {
-
-    indiceActual++;
-
-    if (indiceActual >= imagenes.length) {
-        indiceActual = 0;
-    }
-
-    mostrarImagen();
-
+    cambiarImagen(1);
 }, 6000);
-
-

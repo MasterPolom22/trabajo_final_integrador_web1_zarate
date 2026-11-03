@@ -136,9 +136,7 @@ border-bottom-color: cambia el borde inferior a naranja.*/
 }
 
 
-.carrusel img.desvaneciendo {
-    opacity: 1;
-}
+
 
 .carrusel img {
     display: block;
@@ -148,13 +146,13 @@ border-bottom-color: cambia el borde inferior a naranja.*/
     object-position: center;
     background-color: #FFFFFF;
     border-radius: 10px;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
 }
-/*
+
 .carrusel img.desvaneciendo {
-    opacity: 1;
+    opacity: 0;
 }
-*/
+
 
 .controlesCarrusel {
     display: flex;
